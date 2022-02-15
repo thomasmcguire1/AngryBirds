@@ -12,14 +12,12 @@ public class Bird : MonoBehaviour
     Rigidbody2D _rigidbody2D;
     SpriteRenderer _spriteRenderer;
 
-
     void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         _startPosition = _rigidbody2D.position;
@@ -61,12 +59,6 @@ public class Bird : MonoBehaviour
             desiredPosition.x = _startPosition.x;
 
         _rigidbody2D.position = desiredPosition;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
