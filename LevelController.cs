@@ -15,7 +15,6 @@ public class LevelController : MonoBehaviour
         _monsters = FindObjectsOfType<Monster>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (MonstersAreAllDead())
